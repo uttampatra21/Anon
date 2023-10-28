@@ -5,35 +5,21 @@
       "product": [
         {
           "id": "10001",
-          "title": "baby fabric shoes",
+          "title": "Elevated Colorblock Men's Slim Fit Polo",
           "category": "Shoes",
-          "image": "/assets/images/products/1.jpg",
-          "discountPrice": "₹120,00",
-          "currentPrice": "₹699,00"
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/679084/87/mod01/fnd/IND/fmt/png/Elevated-Colorblock-Men's-Slim-Fit-Polo",
+          "discountPrice": "₹320",
+          "currentPrice": "₹2,699,00",
+          "description": "Step up your game with the Elevated Colorblock Men's Slim Fit Polo. With a classic Cat logo and front"
         },
         {
           "id": "10002",
-          "title": "men's hoodies t-shirt",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
           "category": "Clothes",
-          "image": "/assets/images/products/2.jpg",
-          "discountPrice": "₹109,00",
-          "currentPrice": "₹399,00"
-        },
-        {
-          "id": "10003",
-          "title": "Girls t-Shirts",
-          "category": "Clothes",
-          "image": "/assets/images/products/3.jpg",
-          "discountPrice": "₹120,00",
-          "currentPrice": "₹799,00"
-        },
-        {
-          "id": "10004",
-          "title": "title",
-          "category": "Hat",
-          "image": "/assets/images/products/4.jpg",
-          "discountPrice": "₹140,00",
-          "currentPrice": "₹469,00"
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621154/03/mod01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Polo",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
         }
       ]
     },
@@ -42,35 +28,21 @@
       "product": [
         {
           "id": "10011",
-          "title": "Men's Leather Reversible Belt",
-          "category": "Belt",
-          "image": "/assets/images/products/belt.jpg",
-          "discountPrice": "₹40,00",
-          "currentPrice": "₹299,00"
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Sweat Pants",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621148/01/mod02/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Sweat-Pants",
+          "discountPrice": "₹400",
+          "currentPrice": "₹2999,00"
         },
         {
           "id": "10012",
-          "title": "Relax short Embro design Top",
+          "title": "Scuderia Ferrari Race CBS Men's Motorsport Hoodie",
+          "description": "In 2005, Scuderia Ferrari - the preeminent, time-honoured Formula 1 team - made a momentous",
           "category": "Clothes",
-          "image": "/assets/images/products/clothes-1.jpg",
-          "discountPrice": "₹100,00",
-          "currentPrice": "₹499,00"
-        },
-        {
-          "id": "10013",
-          "title": "Girls pnk Embro design Top",
-          "category": "Clothes",
-          "image": "/assets/images/products/clothes-2.jpg",
-          "discountPrice": "₹89,00",
-          "currentPrice": "₹399,00"
-        },
-        {
-          "id": "10014",
-          "title": "Black Floral Wrap Midi Skirt",
-          "category": "Clothes",
-          "image": "/assets/images/products/clothes-3.jpg",
-          "discountPrice": "₹140,00",
-          "currentPrice": "₹799,00"
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/622233/01/mod01/fnd/IND/fmt/png/Scuderia-Ferrari-Race-CBS-Men's-Motorsport-Hoodie",
+          "discountPrice": "₹700",
+          "currentPrice": "₹8,999,00"
         }
       ]
     },
@@ -79,35 +51,21 @@
       "product": [
         {
           "id": "10021",
-          "title": "Men's Leather Reversible Belt",
+          "title": "Ferrari Style Men's Regular Fit Hooded Jacket",
+          "description": "In 2005, Scuderia Ferrari - the preeminent, time-honoured Formula 1 team - made a momentous",
           "category": "Jacket",
-          "image": "/assets/images/products/jacket-1.jpg",
-          "discountPrice": "₹240,00",
-          "currentPrice": "₹999,00"
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/538326/01/mod01/fnd/IND/fmt/png/Ferrari-Style-Men's-Regular-Fit-Hooded-Jacket",
+          "discountPrice": "₹640",
+          "currentPrice": "₹6,999,00"
         },
         {
           "id": "10022",
-          "title": "Senco Gold 24k Gold jewellery",
-          "category": "Jewellery",
-          "image": "/assets/images/products/jewellery-1.jpg",
-          "discountPrice": "₹39,00",
-          "currentPrice": "₹799,00"
-        },
-        {
-          "id": "10023",
-          "title": "Men's stunning t-Shirts",
+          "title": "Mercedes AMG Petronas F1 Men's Regular Fit Hooded Sweat Jacket",
+          "description": "Mercedes-AMG Petronas Motorsport Formula One badge on right chest",
           "category": "Clothes",
-          "image": "/assets/images/products/shirt-1.jpg",
-          "discountPrice": "₹39,00",
-          "currentPrice": "₹799,00"
-        },
-        {
-          "id": "10024",
-          "title": "Men's Leather Reversible Shoes",
-          "category": "Shoes",
-          "image": "/assets/images/products/shoe-1.jpg",
-          "discountPrice": "₹39,00",
-          "currentPrice": "₹799,00"
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/534906/04/mod01/fnd/IND/fmt/png/Mercedes-AMG-Petronas-F1-Men's-Regular-Fit-Hooded-Sweat-Jacket",
+          "discountPrice": "₹399",
+          "currentPrice": "₹5,799,00"
         }
       ]
     }
@@ -115,37 +73,24 @@
 
   "showcase": [
     {
-      "id": "20001",
-      "title": "SHAMPOO, CONDITIONER & FACEWASH PACKS",
-      "description": "SHAMPOO, CONDITIONER & FACEWASH PACKS",
-      "sold": "20",
-      "available": "34",
-      "discountPrice": "₹599",
-      "currentPrice": "₹899.00",
-      "image1": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shampoo.jpg",
-      "rating": 4.3
+      "id": 20011,
+      "title": "Porsche Legacy T7 Motorsport",
+      "description": "In 2005, Scuderia Ferrari - the preeminent, time-honoured Formula 1 team - made a momentous",
+      "discountPrice": "₹619",
+      "currentPrice": "₹7,399,00",
+      "image": "/assets/images/products/BMW-M-Motorsport-.png",
+      "sold": "30",
+      "available": "5"
     },
     {
-      "id": "20002",
-      "title": "ROSE GOLD DIAMONDS EARRING",
-      "description": "Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor",
-      "sold": "20",
-      "available": "34",
-      "discountPrice": "₹699",
-      "currentPrice": "₹990.00",
-      "image1": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jewellery-1.jpg",
-      "rating": 4.3
-    },
-    {
-      "id": "20003",
-      "title": "Click to open expanded view Samsung 236 L 3 Star",
-      "description": "Samsung 236 L 3 Star Digital Inverter Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2023 Model)",
-      "sold": "28",
-      "discountPrice": "₹8990",
-      "currentPrice": "₹29,990.00",
-      "available": "14",
-      "image1": "https://d12mivgeuoigbq.cloudfront.net/magento-media/GrandBlog/lrfvc2406%20kitchen.jpg",
-      "rating": 4.3
+      "id": 20012,
+      "title": "BMW M Motorsport SDS ",
+      "description": "Since 2012, PUMA Motorsport and BMW Motorsport have fashioned a formidable partnership,",
+      "discountPrice": "₹419",
+      "currentPrice": "₹9,399,00",
+      "image": "/assets/images/products/BMW-M-Motorsport-MT7.png",
+      "sold": "70",
+      "available": "12"
     }
   ],
 
@@ -154,34 +99,12 @@
       "id": "30001",
       "category": "Jacket",
       "title": "Mens winter leathers jackets",
-      "image1": "http://127.0.0.1:5500/assets/images/products/jacket-4.jpg",
-      "image2": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jacket-3.jpg",
+      "image": "/assets/images/products/EVOSTRIPE2.png",
+      "image1": "/assets/images/products/EVOSTRIPE1.png",
       "rating": "4.6",
       "currentPrice": "₹999",
       "discountPrice": "₹499",
       "off": "49"
-    },
-    {
-      "id": "30002",
-      "category": "SHIRT",
-      "title": "Pure Garment Dyed Cotton Shirt",
-      "image1": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shirt-1.jpg",
-      "image2": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shirt-2.jpg",
-      "rating": "4.6",
-      "currentPrice": "₹899",
-      "discountPrice": "₹349",
-      "off": "37"
-    },
-    {
-      "id": "30003",
-      "category": "JACKET",
-      "title": "MEN Yarn Fleece Full-Zip Jacket",
-      "image1": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jacket-6.jpg",
-      "image2": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jacket-5.jpg",
-      "rating": "4.6",
-      "currentPrice": "₹899",
-      "discountPrice": "₹349",
-      "off": "37"
     }
   ],
 

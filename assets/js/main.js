@@ -134,13 +134,14 @@ const dealOfTheDay = (item) => {
   dealOfTheDay.innerHTML = data;
 };
 const dealOfTheDayHTML = (x) => {
+  console.log(x);
   return `
                 <div class="showcase-container">
                   <div class="showcase">
                     <div class="showcase-banner">
                       <img
-                        src="${x.image1}"
-                        alt="shampoo, conditioner & facewash packs"
+                        src="${x.image}"
+                        alt="${x.title}"
                         class="showcase-img"
                       />
                     </div>
@@ -156,7 +157,7 @@ const dealOfTheDayHTML = (x) => {
 
                       <a href="#">
                         <h3 class="showcase-title">
-                          shampoo, conditioner & facewash packs
+                          ${x.title}
                         </h3>
                       </a>
 
@@ -215,8 +216,6 @@ const dealOfTheDayHTML = (x) => {
     `;
 };
 
-
-
 //
 // ===========THIRD DATA New Products
 //
@@ -236,13 +235,13 @@ const newProductHTML = (x) => {
                 <div class="showcase">
                   <div class="showcase-banner">
                     <img
-                      src="${x.image2}"
+                      src="${x.image1}"
                       alt="${x.title}"
                       width="300"
                       class="product-img default"
                     />
                     <img
-                      src="${x.image1}"
+                      src="${x.image}"
                       alt="${x.title}"
                       width="300"
                       class="product-img hover"
@@ -309,7 +308,10 @@ const addToBag = (itemId) => {
   bagItems.push(addItem);
   localStorage.setItem("bagItems", JSON.stringify(bagItems));
   bagCount();
+
+  // console.log(bagItems);
 };
+
 const bagCount = () => {
   const cartItem = document.getElementById("cartItem");
   if (!cartItem) return;
@@ -320,13 +322,10 @@ const bagCount = () => {
 
 let heartItem;
 const addToLove = (item) => {
-
   let data = JSON.parse(item.dataset.heartdata);
   heartItem.push(data);
   localStorage.setItem("heartItem", JSON.stringify(heartItem));
   heartCount();
-
-
 };
 
 const heartCount = () => {

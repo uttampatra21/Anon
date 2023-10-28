@@ -1,7 +1,8 @@
 // Shery.mouseFollower();
-"use strict";
 let bagItemsstr = localStorage.getItem("bagItems");
 let bagItems = bagItemsstr ? JSON.parse(bagItemsstr) : [];
+
+
 const getData = () => {
   let bagData = bagItems
     .map((x) => {
@@ -9,7 +10,7 @@ const getData = () => {
         <div class="cartItems">
           <i class='bx bx-x' onclick="removeFromBag(${x.id})"></i>
           <img
-            src="${x.image1}"
+            src="${x.image}"
           />
           <div id="cartDetails">
             <h4>${x.title}</h4>
