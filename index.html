@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="./assets/css/style-prefix.css" />
     <link rel="stylesheet" href="/assets/css/chat.css" />
+    <link rel="stylesheet" href="/assets/css/search.css" />
     <!--
     - google font link
   -->
@@ -41,7 +42,7 @@
     <!-- 
       ========= CHATAPI
      -->
-     
+
     <!-- <div id="chatbox">
       <div class="chatitem">
         <div class="online">
@@ -218,7 +219,7 @@
 
           <div class="header-search-container">
             <input
-              type="search"
+              
               name="search"
               class="search-field"
               placeholder="Enter your product name..."
@@ -752,6 +753,43 @@
         </div>
       </nav>
     </header>
+
+    <!-- 
+  - SEARCHING
+ -->
+    <div id="search">
+      <div id="content">
+        <div id="search-header">
+          <form id="search-bar">
+            <input
+              onkeyup="search()"
+              id="search-input"
+              type="text"
+              placeholder="SEARCH PUMA.COM"
+            />
+            <i class="bx bx-x" onclick="closeSearch()"></i>
+          </form>
+        </div>
+        <div id="search-list">
+          <div id="search-grid">
+            <div id="tranding-search">
+              <h3>TRENDING SEARCHES</h3>
+              <ul>
+                <li>Shoes for Men</li>
+                <li>Sneakers</li>
+                <li>Shoes</li>
+                <li>Slides</li>
+              </ul>
+            </div>
+
+            <div id="recently-viewed">
+              <h3>RECENTLY VIEWED</h3>
+              <ul id="products"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--
     - MAIN
@@ -1644,7 +1682,7 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/features.js"></script>
-    <script src="./assets/js/chat.js"></script>
+    <script src="./assets/js/search.js"></script>
 
     <!--
     - ionicon link
