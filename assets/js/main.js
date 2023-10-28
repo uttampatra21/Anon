@@ -139,7 +139,7 @@ const dealOfTheDayHTML = (x) => {
                   <div class="showcase">
                     <div class="showcase-banner">
                       <img
-                        src="${x.image}"
+                        src="${x.image1}"
                         alt="shampoo, conditioner & facewash packs"
                         class="showcase-img"
                       />
@@ -214,6 +214,8 @@ const dealOfTheDayHTML = (x) => {
                 </div>
     `;
 };
+
+
 
 //
 // ===========THIRD DATA New Products

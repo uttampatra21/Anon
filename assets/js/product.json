@@ -120,9 +120,9 @@
       "description": "SHAMPOO, CONDITIONER & FACEWASH PACKS",
       "sold": "20",
       "available": "34",
-      "discountPrice": "₹599.00",
+      "discountPrice": "₹599",
       "currentPrice": "₹899.00",
-      "image": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shampoo.jpg",
+      "image1": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shampoo.jpg",
       "rating": 4.3
     },
     {
@@ -131,9 +131,9 @@
       "description": "Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor",
       "sold": "20",
       "available": "34",
-      "discountPrice": "₹699.00",
+      "discountPrice": "₹699",
       "currentPrice": "₹990.00",
-      "image": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jewellery-1.jpg",
+      "image1": "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jewellery-1.jpg",
       "rating": 4.3
     },
     {
@@ -141,10 +141,10 @@
       "title": "Click to open expanded view Samsung 236 L 3 Star",
       "description": "Samsung 236 L 3 Star Digital Inverter Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2023 Model)",
       "sold": "28",
-      "discountPrice": "₹15,990",
+      "discountPrice": "₹8990",
       "currentPrice": "₹29,990.00",
       "available": "14",
-      "image": "https://d12mivgeuoigbq.cloudfront.net/magento-media/GrandBlog/lrfvc2406%20kitchen.jpg",
+      "image1": "https://d12mivgeuoigbq.cloudfront.net/magento-media/GrandBlog/lrfvc2406%20kitchen.jpg",
       "rating": 4.3
     }
   ],
