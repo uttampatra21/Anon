@@ -108,22 +108,22 @@
     }
   ],
 
-  "bestsailler": [
+  "category": [
     {
-      "id": 1,
-      "titan": "title"
+      "heading": "Clothes",
+      "product": [
+        {
+          "id": "10001"
+        }
+      ]
     },
     {
-      "id": 1,
-      "titan": "title"
-    },
-    {
-      "id": 1,
-      "titan": "title"
-    },
-    {
-      "id": 1,
-      "titan": "title"
+      "heading": "Shoes",
+      "product": [
+        {
+          "id": "10001"
+        }
+      ]
     }
   ]
 }

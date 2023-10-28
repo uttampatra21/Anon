@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
 const fetchApi = async () => {
   const response = await fetch(`/assets/js/product.json`);
   const data = await response.json();
-  const { productMinimal, showcase, newproducts } = data;
+  const { productMinimal, showcase, newproducts, category } = data;
 
   //
   // ========== FIRST DATA
@@ -47,6 +47,15 @@ const fetchApi = async () => {
     return x;
   });
   newProducts(thirdItem);
+
+  //
+  // ============ CETAGORIES
+  //
+
+  const cetagories = category.map((x) => {
+    return x;
+  });
+  cetagorieData(cetagories);
 };
 
 //
@@ -65,6 +74,7 @@ const productMinimalITEM = (heading) => {
   if (!productMinimaContainer) return;
   productMinimaContainer.innerHTML = data;
 };
+
 const headingData = (heading, product) => {
   return `
         <div class="product-showcase">
@@ -76,6 +86,7 @@ const headingData = (heading, product) => {
         </div>
     `;
 };
+
 const productItems = (x) => {
   return x
     .map((x) => {
@@ -119,6 +130,7 @@ const singelProduct = (item) => {
   singelProductBox.push(data);
   localStorage.setItem("singelProductBox", JSON.stringify(singelProductBox));
 };
+
 //
 // ===========SECOND DATA
 //
@@ -134,7 +146,6 @@ const dealOfTheDay = (item) => {
   dealOfTheDay.innerHTML = data;
 };
 const dealOfTheDayHTML = (x) => {
-  console.log(x);
   return `
                 <div class="showcase-container">
                   <div class="showcase">
@@ -217,7 +228,7 @@ const dealOfTheDayHTML = (x) => {
 };
 
 //
-// ===========THIRD DATA New Products
+// ===========THIRD DATA
 //
 
 const newProducts = (item) => {
@@ -298,18 +309,69 @@ const newProductHTML = (x) => {
     `;
 };
 
+// ============= CATEGORY
+const cetagorieData = (items) => {
+  const cetagiriesBox = document.getElementById("cetagiriesBox");
+  const data = items
+    .map((x) => {
+      return cetagiriesHTML(x);
+    })
+    .join(" ");
+
+    cetagiriesBox.innerHTML = data;
+};
+
+const cetagiriesHTML = (items) => {
+  return `
+
+  <li class="sidebar-menu-category">
+  <button class="sidebar-accordion-menu" data-accordion-btn>
+    <div class="menu-title-flex">
+      <img
+        src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/377766/04/sv01/fnd/IND/fmt/png/MB.02-Lo-Unisex-Basketball-Shoes"
+        alt="footwear"
+        class="menu-title-img"
+        width="20"
+        height="20"
+      />
+
+      <p class="menu-title">${items.heading}</p>
+    </div>
+
+    <div>
+      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+      <ion-icon
+        name="remove-outline"
+        class="remove-icon"
+      ></ion-icon>
+    </div>
+  </button>
+
+  <ul class="sidebar-submenu-category-list" data-accordion>
+    <li class="sidebar-submenu-category">
+      <a href="#" class="sidebar-submenu-title">
+        <p class="product-name">Sports</p>
+        <data value="45" class="stock" title="Available Stock"
+          >45</data
+        >
+      </a>
+    </li>
+  </ul>
+</li>
+
+  
+  `;
+};
+
 //
 // ==================== ADD TO BAG
 //
 let bagItems;
-
 const addToBag = (itemId) => {
   let addItem = JSON.parse(itemId.dataset.songobj);
   bagItems.push(addItem);
   localStorage.setItem("bagItems", JSON.stringify(bagItems));
   bagCount();
-
-  // console.log(bagItems);
 };
 
 const bagCount = () => {

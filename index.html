@@ -18,8 +18,13 @@
     <!--
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/style-prefix.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="./assets/css/style-prefix.css" />
+    <link rel="stylesheet" href="/assets/css/chat.css" />
     <!--
     - google font link
   -->
@@ -33,6 +38,44 @@
 
   <body>
     <div class="overlay" data-overlay></div>
+    <!-- 
+      ========= CHATAPI
+     -->
+     
+    <!-- <div id="chatbox">
+      <div class="chatitem">
+        <div class="online">
+          <h4>How can we help you today ?</h4>
+          <p>Lets Connect you with puma sales associate</p>
+          <img
+            src="https://avatars.githubusercontent.com/u/108145016?v=4"
+            alt=""
+          />
+          <small>Uttam Patra</small>
+
+          <div id="chat">
+            <ul id="chatBoxCOnt">
+              <li class="chat incomig">
+                <i class="bx bx-bot"></i>
+                <p>
+                  Hi there, <br />
+                  How are you doing ?
+                </p>
+              </li>
+              <li class="chat outgoing">
+                <p>
+                  Lorem ipsum dolor sit amet.</li>
+                </p>
+            </ul>
+
+            <div id="chat-input">
+              <textarea id="textarea" placeholder="Talk to us...."></textarea>
+              <span id="send-btn"><i class="bx bx-send"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
     <!--
     - MODAL
@@ -1008,76 +1051,14 @@
                 </button>
               </div>
 
-              <ul class="sidebar-menu-category-list">
-                <li class="sidebar-menu-category">
-                  <button class="sidebar-accordion-menu" data-accordion-btn>
-                    <div class="menu-title-flex">
-                      <img
-                        src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/847223/05/fnd/IND/fmt/png/Men's-Regular-Fit-T-Shirt"
-                        alt="clothes"
-                        width="20"
-                        height="20"
-                        class="menu-title-img"
-                      />
+              <ul class="sidebar-menu-category-list" id="cetagiriesBox">
+                <!-- 
+                  ========= CETAGORIES
+                 -->
 
-                      <p class="menu-title">Clothes</p>
-                    </div>
-
-                    <div>
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon
-                        name="remove-outline"
-                        class="remove-icon"
-                      ></ion-icon>
-                    </div>
-                  </button>
-
-                  <ul class="sidebar-submenu-category-list" data-accordion>
-                    <li class="sidebar-submenu-category">
-                      <a href="#" class="sidebar-submenu-title">
-                        <p class="product-name">Shirt</p>
-                        <data value="300" class="stock" title="Available Stock"
-                          >300</data
-                        >
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="sidebar-menu-category">
-                  <button class="sidebar-accordion-menu" data-accordion-btn>
-                    <div class="menu-title-flex">
-                      <img
-                        src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/377766/04/sv01/fnd/IND/fmt/png/MB.02-Lo-Unisex-Basketball-Shoes"
-                        alt="footwear"
-                        class="menu-title-img"
-                        width="20"
-                        height="20"
-                      />
-
-                      <p class="menu-title">Footwear</p>
-                    </div>
-
-                    <div>
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon
-                        name="remove-outline"
-                        class="remove-icon"
-                      ></ion-icon>
-                    </div>
-                  </button>
-
-                  <ul class="sidebar-submenu-category-list" data-accordion>
-                    <li class="sidebar-submenu-category">
-                      <a href="#" class="sidebar-submenu-title">
-                        <p class="product-name">Sports</p>
-                        <data value="45" class="stock" title="Available Stock"
-                          >45</data
-                        >
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+                <!-- 
+                  ========= CETAGORIES
+                 -->
               </ul>
             </div>
 
@@ -1663,6 +1644,7 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/features.js"></script>
+    <script src="./assets/js/chat.js"></script>
 
     <!--
     - ionicon link
