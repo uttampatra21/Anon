@@ -2,19 +2,326 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>puma - eCommerce Website</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="https://w0.peakpx.com/wallpaper/246/271/HD-wallpaper-puma-logo-black-black-puma-logo-logos-red-red-puma-logo.jpg"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/css/style-prefix.css" />
+    <link rel="stylesheet" href="/assets/css/singleproduct.css" />
+    <link rel="stylesheet" href="/assets/css/search.css">
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header id="main-header"></header>
 
+    <div id="search"></div>
     <div id="singleproduct">
-        <img width="100px" src="/assets/images/blog-4.jpg" alt="">
+      <div id="grid2-item">
+        <img class="singleimage" src="/assets/images/products/bmw1.png" />
+        <div id="multiple-images">
+          <img src="/assets/images/products/bmw1.png" alt="" />
+          <img src="/assets/images/products/bmw1.png" alt="" />
+          <img src="/assets/images/products/bmw1.png" alt="" />
+          <img src="/assets/images/products/bmw1.png" alt="" />
+        </div>
+      </div>
+      <div id="grid2-item">
+        <a href="/">Home /</a>
+        <h1>BMW M Motorsport Life Men's Non-Hooded Packable Jacket</h1>
+        <h4>$50,00</h4>
+        <div class="size">
+          <span class="size-btn">S</span>
+          <span class="size-btn">M</span>
+        </div>
+        <div id="buttons">
+          <button class="bag add-cart-btn">ADD TO BAG</button>
+          <button class="bag add-cart-wishlist">ADD TO WISHLIST</button>
+        </div>
+      </div>
     </div>
+
+    <!-- 
+      === PRODUCTS
+     -->
+
+    <div class="product-main">
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="product-grid" id="newProduct">
+        <div class="showcase">
+          <div class="showcase-banner">
+            <img
+              src="/assets/images/products/EVOSTRIPE1.png"
+              alt="Mens winter leathers jackets"
+              width="300"
+              class="product-img default"
+            />
+            <img
+              src="/assets/images/products/EVOSTRIPE2.png"
+              alt="Mens winter leathers jackets"
+              width="300"
+              class="product-img hover"
+            />
+
+            <p class="showcase-badge">49%</p>
+            <div class="showcase-actions">
+              <button
+                class="btn-action"
+                onclick="addToLove(this)"
+                data-heartdata='{"id":"30001","category":"Jacket","title":"Mens winter leathers jackets","image":"/assets/images/products/EVOSTRIPE2.png","image1":"/assets/images/products/EVOSTRIPE1.png","rating":"4.6","currentPrice":"₹6,999","discountPrice":"₹499","off":"49"}'
+              >
+                <ion-icon
+                  name="heart-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="heart outline"
+                ></ion-icon>
+              </button>
+
+              <button class="btn-action">
+                <ion-icon
+                  name="eye-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="eye outline"
+                ></ion-icon>
+              </button>
+
+              <button class="btn-action">
+                <ion-icon
+                  name="repeat-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="repeat outline"
+                ></ion-icon>
+              </button>
+
+              <button
+                class="btn-action"
+                onclick="addToBag(this)"
+                data-songobj='{"id":"30001","category":"Jacket","title":"Mens winter leathers jackets","image":"/assets/images/products/EVOSTRIPE2.png","image1":"/assets/images/products/EVOSTRIPE1.png","rating":"4.6","currentPrice":"₹6,999","discountPrice":"₹499","off":"49"}'
+              >
+                <ion-icon
+                  name="bag-add-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="bag add outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="showcase-content">
+            <a href="#" class="showcase-category">Jacket</a>
+
+            <a href="#">
+              <h3 class="showcase-title">Mens winter leathers jackets</h3>
+            </a>
+
+            <div class="showcase-rating">
+              <ion-icon
+                name="star"
+                role="img"
+                class="md hydrated"
+                aria-label="star"
+              ></ion-icon>
+              <ion-icon
+                name="star"
+                role="img"
+                class="md hydrated"
+                aria-label="star"
+              ></ion-icon>
+              <ion-icon
+                name="star"
+                role="img"
+                class="md hydrated"
+                aria-label="star"
+              ></ion-icon>
+              <ion-icon
+                name="star-outline"
+                role="img"
+                class="md hydrated"
+                aria-label="star outline"
+              ></ion-icon>
+              <ion-icon
+                name="star-outline"
+                role="img"
+                class="md hydrated"
+                aria-label="star outline"
+              ></ion-icon>
+            </div>
+
+            <div class="price-box">
+              <p class="price">₹499</p>
+              <del>₹6,999</del>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase">
+          <div class="showcase-banner">
+            <img
+              src="/assets/images/products/bmw2.png"
+              alt="Mens winter leathers jackets"
+              width="300"
+              class="product-img default"
+            />
+            <img
+              src="/assets/images/products/bmw1.png"
+              alt="Mens winter leathers jackets"
+              width="300"
+              class="product-img hover"
+            />
+
+            <p class="showcase-badge">49%</p>
+            <div class="showcase-actions">
+              <button
+                class="btn-action"
+                onclick="addToLove(this)"
+                data-heartdata='{"id":"30002","category":"Jacket","title":"Mens winter leathers jackets","image":"/assets/images/products/bmw1.png","image1":"/assets/images/products/bmw2.png","rating":"4.6","currentPrice":"₹8,999","discountPrice":"₹499","off":"49"}'
+              >
+                <ion-icon
+                  name="heart-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="heart outline"
+                ></ion-icon>
+              </button>
+
+              <button class="btn-action">
+                <ion-icon
+                  name="eye-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="eye outline"
+                ></ion-icon>
+              </button>
+
+              <button class="btn-action">
+                <ion-icon
+                  name="repeat-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="repeat outline"
+                ></ion-icon>
+              </button>
+
+              <button
+                class="btn-action"
+                onclick="addToBag(this)"
+                data-songobj='{"id":"30002","category":"Jacket","title":"Mens winter leathers jackets","image":"/assets/images/products/bmw1.png","image1":"/assets/images/products/bmw2.png","rating":"4.6","currentPrice":"₹8,999","discountPrice":"₹499","off":"49"}'
+              >
+                <ion-icon
+                  name="bag-add-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="bag add outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="showcase-content">
+            <a href="#" class="showcase-category">Jacket</a>
+
+            <a href="#">
+              <h3 class="showcase-title">Mens winter leathers jackets</h3>
+            </a>
+
+            <div class="showcase-rating">
+              <ion-icon
+                name="star"
+                role="img"
+                class="md hydrated"
+                aria-label="star"
+              ></ion-icon>
+              <ion-icon
+                name="star"
+                role="img"
+                class="md hydrated"
+                aria-label="star"
+              ></ion-icon>
+              <ion-icon
+                name="star"
+                role="img"
+                class="md hydrated"
+                aria-label="star"
+              ></ion-icon>
+              <ion-icon
+                name="star-outline"
+                role="img"
+                class="md hydrated"
+                aria-label="star outline"
+              ></ion-icon>
+              <ion-icon
+                name="star-outline"
+                role="img"
+                class="md hydrated"
+                aria-label="star outline"
+              ></ion-icon>
+            </div>
+
+            <div class="price-box">
+              <p class="price">₹499</p>
+              <del>₹8,999</del>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 
+      ==== FOOTER
+     -->
+
+     <footer id="main-footer"></footer>
     <!-- 
         ==== SCRIPT 
      -->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/bag.js"></script>
     <script src="/assets/js/single.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/search.js"></script>
+    <!-- 
+
+     -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

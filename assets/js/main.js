@@ -52,10 +52,9 @@ const fetchApi = async () => {
   // ============ CETAGORIES
   //
 
-  const cetagories = category.map((x) => {
-    return x;
-  });
-  cetagorieData(cetagories);
+  
+  cetagorieData(category);
+  
 };
 
 //
@@ -311,55 +310,14 @@ const newProductHTML = (x) => {
 
 // ============= CATEGORY
 const cetagorieData = (items) => {
-  const cetagiriesBox = document.getElementById("cetagiriesBox");
-  const data = items
-    .map((x) => {
-      return cetagiriesHTML(x);
-    })
-    .join(" ");
-
-    cetagiriesBox.innerHTML = data;
+  const {shoes} = items;
+  shoes.map((x)=>{
+    console.log(x);
+  })
 };
 
 const cetagiriesHTML = (items) => {
   return `
-
-  <li class="sidebar-menu-category">
-  <button class="sidebar-accordion-menu" data-accordion-btn>
-    <div class="menu-title-flex">
-      <img
-        src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/377766/04/sv01/fnd/IND/fmt/png/MB.02-Lo-Unisex-Basketball-Shoes"
-        alt="footwear"
-        class="menu-title-img"
-        width="20"
-        height="20"
-      />
-
-      <p class="menu-title">${items.heading}</p>
-    </div>
-
-    <div>
-      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-      <ion-icon
-        name="remove-outline"
-        class="remove-icon"
-      ></ion-icon>
-    </div>
-  </button>
-
-  <ul class="sidebar-submenu-category-list" data-accordion>
-    <li class="sidebar-submenu-category">
-      <a href="#" class="sidebar-submenu-title">
-        <p class="product-name">Sports</p>
-        <data value="45" class="stock" title="Available Stock"
-          >45</data
-        >
-      </a>
-    </li>
-  </ul>
-</li>
-
-  
   `;
 };
 

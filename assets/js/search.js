@@ -23,7 +23,7 @@ const searchApi = async () => {
                   </a>
                 </li>
     `;
-  });
+  }).join(" ");
   document.getElementById("products").innerHTML = lists;
 };
 searchApi();

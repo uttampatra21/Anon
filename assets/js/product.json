@@ -102,28 +102,80 @@
       "image": "/assets/images/products/EVOSTRIPE2.png",
       "image1": "/assets/images/products/EVOSTRIPE1.png",
       "rating": "4.6",
-      "currentPrice": "₹999",
+      "currentPrice": "₹6,999",
+      "discountPrice": "₹499",
+      "off": "49"
+    },
+    {
+      "id": "30002",
+      "category": "Jacket",
+      "title": "Mens winter leathers jackets",
+      "image": "/assets/images/products/bmw1.png",
+      "image1": "/assets/images/products/bmw2.png",
+      "rating": "4.6",
+      "currentPrice": "₹8,999",
+      "discountPrice": "₹499",
+      "off": "49"
+    },
+    {
+      "id": "30002",
+      "category": "Jacket",
+      "title": "Mens winter leathers jackets",
+      "image": "/assets/images/products/bmw1.png",
+      "image1": "/assets/images/products/bmw2.png",
+      "rating": "4.6",
+      "currentPrice": "₹8,999",
+      "discountPrice": "₹499",
+      "off": "49"
+    },
+    {
+      "id": "30002",
+      "category": "Jacket",
+      "title": "Mens winter leathers jackets",
+      "image": "/assets/images/products/bmw1.png",
+      "image1": "/assets/images/products/bmw2.png",
+      "rating": "4.6",
+      "currentPrice": "₹8,999",
+      "discountPrice": "₹499",
+      "off": "49"
+    },
+    {
+      "id": "30002",
+      "category": "Jacket",
+      "title": "Mens winter leathers jackets",
+      "image": "/assets/images/products/bmw1.png",
+      "image1": "/assets/images/products/bmw2.png",
+      "rating": "4.6",
+      "currentPrice": "₹8,999",
       "discountPrice": "₹499",
       "off": "49"
     }
   ],
 
-  "category": [
-    {
-      "heading": "Clothes",
-      "product": [
-        {
-          "id": "10001"
+  "category": {
+    "shoes": [
+      {
+        "running": {
+          "heading": "Running",
+          "product": [
+            {
+              "id": "400001"
+            },
+
+            { "id": "400002" }
+          ]
+        },
+        "sports": {
+          "heading": "Running",
+          "product": [
+            {
+              "id": "400001"
+            },
+
+            { "id": "400002" }
+          ]
         }
-      ]
-    },
-    {
-      "heading": "Shoes",
-      "product": [
-        {
-          "id": "10001"
-        }
-      ]
-    }
-  ]
+      }
+    ]
+  }
 }

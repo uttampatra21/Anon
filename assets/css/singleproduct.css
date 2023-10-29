@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Chakra+Petch&family=Montserrat:wght@300;700&family=Open+Sans&family=Pacifico&family=Pinyon+Script&family=Rajdhani:wght@500&family=Raleway:wght@200&family=Roboto:wght@400;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  padding: 10px 0;
+}
+#singleproduct {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+  line-height: 1.1;
+}
+
+.singleimage {
+  height: 400px;
+  object-fit: cover;
+}
+
+#grid2-item {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#multiple-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+#multiple-images img {
+  height: 90px;
+  object-fit: cover;
+}
+.bag {
+  outline: none;
+  border: none;
+  padding: 15px;
+  background-color: rgb(245, 75, 75);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1.5px solid rgb(245, 75, 75);
+}
+
+#grid2-item:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bag:nth-child(2) {
+  background-color: #fff;
+  color: #000;
+  border: 1.5px solid rgb(245, 75, 75);
+}
+.bag:nth-child(2):hover {
+  background-color: rgb(245, 75, 75);
+  color: #fff;
+  transition: 0.5s;
+}
+h4{
+    margin: 0;
+    color: rgb(241, 47, 47);
+    font-size: 2vw;
+}
+
+.size{
+    margin-top: 2vw;
+}
+.size-btn {
+    padding: 15px 18px;
+    margin: 5px;
+    opacity: .7;
+    border: 1px solid #ccc;
+    background-color:  rgb(243, 12, 12);
+    color: #fff;
+}
+
+
+#buttons{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
