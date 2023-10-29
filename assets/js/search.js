@@ -2,10 +2,11 @@ const searchApi = async () => {
   const response = await fetch("/assets/js/product.json");
   const data = await response.json();
   const { newproducts } = data;
-  const lists = newproducts.map((x) => {
-    return `
+  const lists = newproducts
+    .map((x) => {
+      return `
                 <li class="item-listss">
-                  <a href="/">
+                  <a href="/assets/pages/product.html">
                     <img
                       width="100px"
                       src="${x.image}"
@@ -23,7 +24,8 @@ const searchApi = async () => {
                   </a>
                 </li>
     `;
-  }).join(" ");
+    })
+    .join(" ");
   document.getElementById("products").innerHTML = lists;
 };
 searchApi();
@@ -57,6 +59,6 @@ headerSearchContainer.addEventListener("click", () => {
   document.getElementById("search").style.display = "flex";
 });
 
-const closeSearch = () =>{
+const closeSearch = () => {
   document.getElementById("search").style.display = "none";
-}
+};

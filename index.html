@@ -42,9 +42,8 @@
     <!-- 
       ========= CHATAPI
      -->
-
-    <!-- <div id="chatbox">
-      <div class="chatitem">
+    <div id="chatbox">
+    <div class="chatitem">
         <div class="online">
           <h4>How can we help you today ?</h4>
           <p>Lets Connect you with puma sales associate</p>
@@ -76,8 +75,11 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
+    <div class="small-chatitem">
+      <div class="Ionline"></div>
+    </div>
     <!--
     - MODAL
   -->
@@ -284,6 +286,8 @@
       <div class="category">
         <div class="container">
           <div class="category-item-container has-scrollbar">
+
+            
             <div class="category-item">
               <div class="category-img-box">
                 <img
@@ -324,125 +328,8 @@
               </div>
             </div>
 
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/glasses.svg"
-                  alt="glasses & lens"
-                  width="30"
-                />
-              </div>
 
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">Glasses & lens</h3>
 
-                  <p class="category-item-amount">(68)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
-
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/shorts.svg"
-                  alt="shorts & jeans"
-                  width="30"
-                />
-              </div>
-
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">Shorts & jeans</h3>
-
-                  <p class="category-item-amount">(84)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
-
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/tee.svg"
-                  alt="t-shirts"
-                  width="30"
-                />
-              </div>
-
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">T-shirts</h3>
-
-                  <p class="category-item-amount">(35)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
-
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/jacket.svg"
-                  alt="jacket"
-                  width="30"
-                />
-              </div>
-
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">Jacket</h3>
-
-                  <p class="category-item-amount">(16)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
-
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/watch.svg"
-                  alt="watch"
-                  width="30"
-                />
-              </div>
-
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">Watch</h3>
-
-                  <p class="category-item-amount">(27)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
-
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/hat.svg"
-                  alt="hat & caps"
-                  width="30"
-                />
-              </div>
-
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">Hat & caps</h3>
-
-                  <p class="category-item-amount">(39)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -495,12 +382,74 @@
 
                   <ul class="sidebar-submenu-category-list" data-accordion>
                     <li class="sidebar-submenu-category">
-                      <a href="#" class="sidebar-submenu-title">
-                        <p class="product-name">Sports</p>
-                        <data value="45" class="stock" title="Available Stock"
-                          >45</data
-                        >
-                      </a>
+                      <!-- 
+
+                        ===========
+                       -->
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/377766/04/sv01/fnd/IND/fmt/png/MB.02-Lo-Unisex-Basketball-Shoes"
+                        alt="footwear"
+                        class="menu-title-img"
+                        width="20"
+                        height="20"
+                      />
+                      <p class="menu-title">Clothes </p>
+                    </div>
+
+                    <div>
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon
+                        name="remove-outline"
+                        class="remove-icon"
+                      ></ion-icon>
+                    </div>
+                  </button>
+
+                  <ul class="sidebar-submenu-category-list" data-accordion>
+                    <li class="sidebar-submenu-category" id="jackets-data">
+                      <!-- 
+
+                        ===========
+                       -->
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/377766/04/sv01/fnd/IND/fmt/png/MB.02-Lo-Unisex-Basketball-Shoes"
+                        alt="footwear"
+                        class="menu-title-img"
+                        width="20"
+                        height="20"
+                      />
+                      <p class="menu-title">Sports</p>
+                    </div>
+
+                    <div>
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon
+                        name="remove-outline"
+                        class="remove-icon"
+                      ></ion-icon>
+                    </div>
+                  </button>
+
+                  <ul class="sidebar-submenu-category-list" data-accordion>
+                    <li class="sidebar-submenu-category" id="sports-data">
+                      <!-- 
+
+                        ===========
+                       -->
                     </li>
                   </ul>
                 </li>

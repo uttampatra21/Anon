@@ -149,33 +149,175 @@
       "currentPrice": "₹8,999",
       "discountPrice": "₹499",
       "off": "49"
+    },
+    {
+      "id": "30002",
+      "category": "Jacket",
+      "title": "Mens winter leathers jackets",
+      "image": "/assets/images/products/bmw1.png",
+      "image1": "/assets/images/products/bmw2.png",
+      "rating": "4.6",
+      "currentPrice": "₹8,999",
+      "discountPrice": "₹499",
+      "off": "49"
+    },
+    {
+      "id": "30002",
+      "category": "Jacket",
+      "title": "Mens winter leathers jackets",
+      "image": "/assets/images/products/bmw1.png",
+      "image1": "/assets/images/products/bmw2.png",
+      "rating": "4.6",
+      "currentPrice": "₹8,999",
+      "discountPrice": "₹499",
+      "off": "49"
+    },
+    {
+      "id": "30002",
+      "category": "Jacket",
+      "title": "Mens winter leathers jackets",
+      "image": "/assets/images/products/bmw1.png",
+      "image1": "/assets/images/products/bmw2.png",
+      "rating": "4.6",
+      "currentPrice": "₹8,999",
+      "discountPrice": "₹499",
+      "off": "49"
     }
   ],
 
   "category": {
     "shoes": [
       {
-        "running": {
-          "heading": "Running",
-          "product": [
-            {
-              "id": "400001"
-            },
-
-            { "id": "400002" }
-          ]
-        },
-        "sports": {
-          "heading": "Running",
-          "product": [
-            {
-              "id": "400001"
-            },
-
-            { "id": "400002" }
-          ]
-        }
+        "heading": "Sports",
+        "product": [
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" }
+        ]
+      },
+      {
+        "heading": "Running",
+        "product": [
+          { "id": "400001" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" }
+        ]
+      }
+    ],
+    "jackets": [
+      {
+        "heading": "Jackets",
+        "product": [
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" }
+        ]
+      },
+      {
+        "heading": "Hoodies",
+        "product": [
+          { "id": "400001" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" }
+        ]
+      }
+    ],
+    "sports": [
+      {
+        "heading": "Running",
+        "product": [
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" }
+        ]
+      },
+      {
+        "heading": "Traning",
+        "product": [
+          { "id": "400001" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" }
+        ]
+      },
+      {
+        "heading": "Busketball",
+        "product": [
+          { "id": "400001" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" },
+          { "id": "400002" }
+        ]
       }
     ]
-  }
+  },
+
+  "colaboration": [
+    {
+      "id": "88881",
+      "heading": "Puma x Stapple",
+      "image": "/assets/images/products/BMW-M-Motorsport-MT7.png",
+      "products": [
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        }
+      ]
+    },
+    {
+      "id": "88881",
+      "heading": "Puma x Stapple",
+      "image": "/assets/images/products/BMW-M-Motorsport-MT7.png",
+      "products": [
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        },
+        {
+          "id": "800881"
+        }
+      ]
+    }
+  ]
 }

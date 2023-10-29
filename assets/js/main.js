@@ -14,24 +14,32 @@ window.addEventListener("load", () => {
 });
 
 //
+//
 //=============== FETCH API
+//
 //
 
 const fetchApi = async () => {
   const response = await fetch(`/assets/js/product.json`);
   const data = await response.json();
-  const { productMinimal, showcase, newproducts, category } = data;
+  const { productMinimal, showcase, newproducts, category, colaboration } =
+    data;
 
+  //
   //
   // ========== FIRST DATA
   //
+  //
+
   const firstItem = productMinimal.map((x) => {
     return x;
   });
   productMinimalITEM(firstItem);
 
   //
+  //
   // ============== SECOND DATA
+  //
   //
 
   const secondItem = showcase.map((x) => {
@@ -40,7 +48,9 @@ const fetchApi = async () => {
   dealOfTheDay(secondItem);
 
   //
+  //
   // ============ THIRD DATA
+  //
   //
 
   const thirdItem = newproducts.map((x) => {
@@ -49,16 +59,30 @@ const fetchApi = async () => {
   newProducts(thirdItem);
 
   //
+  //
   // ============ CETAGORIES
   //
-
-  
+  //
   cetagorieData(category);
-  
+  //
+  //
+  // ============ CETAGORIES
+  //
+  //
+
+  colaborationData(category);
+
+  //
+  //
+  // =========== END
+  //
+  //
 };
 
 //
+//
 // =============== FIRST DATA
+//
 //
 
 const productMinimalITEM = (heading) => {
@@ -131,7 +155,9 @@ const singelProduct = (item) => {
 };
 
 //
+//
 // ===========SECOND DATA
+//
 //
 
 const dealOfTheDay = (item) => {
@@ -227,7 +253,9 @@ const dealOfTheDayHTML = (x) => {
 };
 
 //
+//
 // ===========THIRD DATA
+//
 //
 
 const newProducts = (item) => {
@@ -284,7 +312,7 @@ const newProductHTML = (x) => {
                   <div class="showcase-content">
                     <a href="#" class="showcase-category">${x.category}</a>
 
-                    <a href="#">
+                    <a href="/assets/pages/product.html">
                       <h3 class="showcase-title">
                         ${x.title}
                       </h3>
@@ -308,22 +336,87 @@ const newProductHTML = (x) => {
     `;
 };
 
+//
+//
 // ============= CATEGORY
+//
+//
+
 const cetagorieData = (items) => {
-  const {shoes} = items;
-  shoes.map((x)=>{
-    console.log(x);
-  })
+  const { shoes, jackets, sports } = items;
+  shoeData(shoes);
+  jacketsData(jackets);
+  sportsData(sports);
 };
 
-const cetagiriesHTML = (items) => {
-  return `
-  `;
+const shoeData = (shoes) => {
+  let data = shoes
+    .map((x) => {
+      return `
+            <a href="#" class="sidebar-submenu-title">
+            <p class="product-name">${x.heading}</p>
+            <data value="${x.product.length}" class="stock" title="Available Stock"
+              >${x.product.length}</data
+            >
+          </a>
+        `;
+    })
+    .join(" ");
+  document.querySelector(".sidebar-submenu-category").innerHTML = data;
 };
 
+const jacketsData = (jackets) => {
+  let data = jackets
+    .map((x) => {
+      return `
+          <a href="#" class="sidebar-submenu-title">
+          <p class="product-name">${x.heading}</p>
+          <data value="${x.product.length}" class="stock" title="Available Stock"
+            >${x.product.length}</data
+          >
+        </a>
+      `;
+    })
+    .join(" ");
+  document.querySelector("#jackets-data").innerHTML = data;
+};
+
+const sportsData = (sports) => {
+  let data = sports
+    .map((x) => {
+      return `
+          <a href="#" class="sidebar-submenu-title">
+          <p class="product-name">${x.heading}</p>
+          <data value="${x.product.length}" class="stock" title="Available Stock"
+            >${x.product.length}</data
+          >
+        </a>
+      `;
+    })
+    .join(" ");
+  document.querySelector("#sports-data").innerHTML = data;
+};
+
+//
+//
+// ==================== COLABORATIONS
+//
+//
+
+const colaborationData = (items) => {
+  console.log(items);
+  let data = `
+  <h1></h1>
+  
+  `
+};
+
+//
 //
 // ==================== ADD TO BAG
 //
+//
+
 let bagItems;
 const addToBag = (itemId) => {
   let addItem = JSON.parse(itemId.dataset.songobj);
@@ -338,7 +431,11 @@ const bagCount = () => {
   cartItem.innerHTML = bagItems.length;
 };
 
+//
+//
 // =========== ADD TO HEARTS
+//
+//
 
 let heartItem;
 const addToLove = (item) => {

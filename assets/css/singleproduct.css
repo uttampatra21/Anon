@@ -20,6 +20,10 @@ h1 {
   object-fit: cover;
 }
 
+#singleproduct, .product-main{
+  padding: 2vw 15vw;
+}
+
 #grid2-item {
   padding: 10px;
   display: flex;
@@ -33,7 +37,7 @@ h1 {
 }
 
 #multiple-images img {
-  height: 90px;
+  height: 100px;
   object-fit: cover;
 }
 .bag {
