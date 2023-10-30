@@ -1,7 +1,7 @@
-body{
-    /* position: relative; */
+body {
+  /* position: relative; */
 }
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   display: none;
 }
 #search {
@@ -59,14 +59,14 @@ body{
 }
 
 #tranding-search ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-} 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 #tranding-search ul li {
-    opacity: .7;
-    font-weight: 600;
-    font-size: 17px;
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: 17px;
 }
 #content h3 {
   line-height: 5;
@@ -91,8 +91,8 @@ body{
   font-size: 15px;
 }
 #search-price {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
   padding: 10px 0;
 }
 #search-price .discount-price {
@@ -105,10 +105,8 @@ body{
   opacity: 0.6;
 }
 
-.item-listss{
+.item-listss {
   padding: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-
-
-

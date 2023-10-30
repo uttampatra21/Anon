@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./assets/css/style-prefix.css" />
     <link rel="stylesheet" href="/assets/css/chat.css" />
     <link rel="stylesheet" href="/assets/css/search.css" />
+    <link rel="stylesheet" href="/assets/css/features.css" />
     <!--
     - google font link
   -->
@@ -38,6 +39,11 @@
   </head>
 
   <body>
+    <!-- <div id="popup">
+      <a href="/assets/pages/bag.html" class="action-btn">
+        <ion-icon name="bag-handle-outline" role="img" class="md hydrated" aria-label="bag handle outline"></ion-icon>
+      </a>
+    </div> -->
     <div class="overlay" data-overlay></div>
     <!-- 
       ========= CHATAPI
@@ -79,6 +85,7 @@
 
     <div class="small-chatitem">
       <div class="Ionline"></div>
+      <p class="round">puma - forver -faster - features - long -</p>
     </div>
     <!--
     - MODAL
@@ -285,51 +292,10 @@
 
       <div class="category">
         <div class="container">
-          <div class="category-item-container has-scrollbar">
-
-            
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/dress.svg"
-                  alt="dress & frock"
-                  width="30"
-                />
-              </div>
-
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">Dress & frock</h3>
-
-                  <p class="category-item-amount">(53)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
-
-            <div class="category-item">
-              <div class="category-img-box">
-                <img
-                  src="./assets/images/icons/coat.svg"
-                  alt="winter wear"
-                  width="30"
-                />
-              </div>
-
-              <div class="category-content-box">
-                <div class="category-content-flex">
-                  <h3 class="category-item-title">Winter wear</h3>
-
-                  <p class="category-item-amount">(58)</p>
-                </div>
-
-                <a href="#" class="category-btn">Show all</a>
-              </div>
-            </div>
-
-
-
+          <div class="category-item-container has-scrollbar" id="colab-data">
+            <!-- 
+              ======== JSON DATA
+             -->
           </div>
         </div>
       </div>
@@ -355,7 +321,7 @@
 
               <ul class="sidebar-menu-category-list" id="cetagiriesBox">
                 <!-- 
-                  ========= CETAGORIES
+                  ========= CETAGORIES / JSON DATA
                  -->
                 <li class="sidebar-menu-category">
                   <button class="sidebar-accordion-menu" data-accordion-btn>
@@ -454,7 +420,7 @@
                   </ul>
                 </li>
                 <!-- 
-                  ========= CETAGORIES
+                  ========= CETAGORIES / JSON DATA
                  -->
               </ul>
             </div>
@@ -798,6 +764,7 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/features.js"></script>
     <script src="./assets/js/search.js"></script>
+    <script src="/assets//js/chatBot.js"></script>
 
     <!--
     - ionicon link

@@ -70,7 +70,7 @@ const fetchApi = async () => {
   //
   //
 
-  colaborationData(category);
+  colaborationData(colaboration);
 
   //
   //
@@ -404,11 +404,33 @@ const sportsData = (sports) => {
 //
 
 const colaborationData = (items) => {
-  console.log(items);
-  let data = `
-  <h1></h1>
-  
-  `
+  let data = items
+    .map((x) => {
+      return `
+                
+            <div class="category-item">
+            <div class="category-img-box">
+              <img
+                src="./assets/images/icons/dress.svg"
+                alt="dress & frock"
+                width="30"
+              />
+            </div>
+
+            <div class="category-content-box">
+              <div class="category-content-flex">
+                <h3 class="category-item-title">${x.heading}</h3>
+
+                <p class="category-item-amount">(${x.products.length})</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+            </div>
+          </div>
+    `;
+    })
+    .join(" ");
+  document.getElementById("colab-data").innerHTML = data;
 };
 
 //

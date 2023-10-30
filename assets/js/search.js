@@ -52,6 +52,7 @@ const search = () => {
   }
 };
 
+
 const headerSearchContainer = document.querySelector(
   ".header-search-container"
 );

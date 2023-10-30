@@ -22,3 +22,15 @@ const fetchData = async () => {
   console.log(data);
 };
 fetchData();
+
+
+{
+  const circleText = document.querySelector(".round");
+  circleText.innerHTML = circleText.innerText
+    .split("")
+    .map(
+      (char, i) =>
+        `<span style="transform:rotate(${i * 8.3}deg)">${char}</span>`
+    )
+    .join("");
+}

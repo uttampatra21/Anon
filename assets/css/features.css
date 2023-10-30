@@ -1,0 +1,24 @@
+html,
+body {
+  transition: 0.5s;
+}
+#popup {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 999;
+  background-color: #ccc;
+  padding: 12px;
+  transition: 0.5s top ease;
+  border-radius: 10px;
+  display: flex;
+  
+}
+
+#popup .hydrated {
+    font-size: 2rem;
+    color: #000;
+}
+#popup a {
+    position: relative;
+}

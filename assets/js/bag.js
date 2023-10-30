@@ -2,6 +2,12 @@
 let bagItemsstr = localStorage.getItem("bagItems");
 let bagItems = bagItemsstr ? JSON.parse(bagItemsstr) : [];
 
+let heartItemBoxstr = localStorage.getItem("heartItem");
+heartItem = heartItemBoxstr ? JSON.parse(heartItemBoxstr) : [];
+
+document.getElementById("cartItem").innerText = bagItems.length
+document.getElementById("heartItem").innerText = heartItem.length
+
 
 const getData = () => {
   let bagData = bagItems
@@ -38,9 +44,12 @@ getData();
 const removeFromBag = (id) => {
   bagItems = bagItems.filter((i) => id != i.id);
   localStorage.setItem("bagItems", JSON.stringify(bagItems));
+  document.getElementById("cartItem").innerText = bagItems.length
   getData();
   checkout();
 };
+
+
 
 const checkout = () => {
   const bagsummerry = document.getElementById("checkout");
