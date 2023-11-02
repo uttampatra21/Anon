@@ -1,0 +1,20 @@
+{
+  "name": "anon---clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uttampatra21/Anon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uttampatra21/Anon/issues"
+  },
+  "homepage": "https://github.com/uttampatra21/Anon#readme"
+}

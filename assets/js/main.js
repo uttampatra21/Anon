@@ -1,177 +1,151 @@
 window.addEventListener("load", () => {
+  let bagItemsstr = localStorage.getItem("busket");
+  busket = bagItemsstr ? JSON.parse(bagItemsstr) : [];
+
+  let loveItemstr = localStorage.getItem("favorite");
+  favorite = loveItemstr ? JSON.parse(loveItemstr) : [];
   fetchApi();
-  let bagItemsstr = localStorage.getItem("bagItems");
-  bagItems = bagItemsstr ? JSON.parse(bagItemsstr) : [];
-
-  let singelProductBoxstr = localStorage.getItem("singelProductBox");
-  singelProductBox = singelProductBoxstr ? JSON.parse(singelProductBoxstr) : [];
-
-  let heartItemBoxstr = localStorage.getItem("heartItem");
-  heartItem = heartItemBoxstr ? JSON.parse(heartItemBoxstr) : [];
-
-  bagCount();
+  count();
   heartCount();
 });
-
-//
-//
-//=============== FETCH API
-//
-//
-
 const fetchApi = async () => {
-  const response = await fetch(`/assets/js/product.json`);
+  const api = `http://localhost:3000/products`;
+  const response = await fetch(api);
   const data = await response.json();
-  const { productMinimal, showcase, newproducts, category, colaboration } =
-    data;
+  dealOfTheDay(data);
+  const datav = (from = 0, to = 4) => {
+    let filter = data.slice(from, to);
+    let dataItems = filter
+      .map((x) => {
+        return `
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="${x.image}"
+                      alt="${x.title}"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="${x.imageAlt}"
+                      alt="${x.title}"
+                      width="300"
+                      class="product-img hover"
+                    />
 
-  //
-  //
-  // ========== FIRST DATA
-  //
-  //
+                    <p class="showcase-badge">${x.off}%</p>
+                    <div class="showcase-actions">
+                      <button class="btn-action" onclick="addToLove(this)" data-heartdata='${JSON.stringify(
+                        x
+                      )}'>
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
 
-  const firstItem = productMinimal.map((x) => {
-    return x;
-  });
-  productMinimalITEM(firstItem);
+                      <button class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </button>
 
-  //
-  //
-  // ============== SECOND DATA
-  //
-  //
+                      <button class="btn-action">
+                        <ion-icon name="repeat-outline"></ion-icon>
+                      </button>
 
-  const secondItem = showcase.map((x) => {
-    return x;
-  });
-  dealOfTheDay(secondItem);
-
-  //
-  //
-  // ============ THIRD DATA
-  //
-  //
-
-  const thirdItem = newproducts.map((x) => {
-    return x;
-  });
-  newProducts(thirdItem);
-
-  //
-  //
-  // ============ CETAGORIES
-  //
-  //
-  cetagorieData(category);
-  //
-  //
-  // ============ CETAGORIES
-  //
-  //
-
-  colaborationData(colaboration);
-
-  //
-  //
-  // =========== END
-  //
-  //
-};
-
-//
-//
-// =============== FIRST DATA
-//
-//
-
-const productMinimalITEM = (heading) => {
-  const data = heading
-    .map((x) => {
-      const { heading, product } = x;
-      return headingData(heading, product);
-    })
-    .join(" ");
-
-  const productMinimaContainer = document.querySelector(".product-minimal");
-  if (!productMinimaContainer) return;
-  productMinimaContainer.innerHTML = data;
-};
-
-const headingData = (heading, product) => {
-  return `
-        <div class="product-showcase">
-            <h2 class="title">${heading}</h2>
-
-            <div class="showcase-wrapper has-scrollbar">
-                ${productItems(product)}
-            </div>
-        </div>
-    `;
-};
-
-const productItems = (x) => {
-  return x
-    .map((x) => {
-      return `
-                <div class="showcase-container">
-                    <div class="showcase">
-                        <a href="/assets/pages/product.html" class="showcase-img-box" onclick="singelProduct(this)" data-singleobj='${JSON.stringify(
-                          x
-                        )}'>
-                        <img
-                            src=${x.image}
-                            alt="relaxed short full sleeve t-shirt"
-                            width="70"
-                            class="showcase-img"/>
-                        </a>
-
-                    <div class="showcase-content">
-                        <a href="#">
-                            <h4 class="showcase-title">
-                            ${x.title}
-                            </h4>
-                        </a>
-
-                        <a href="#" class="showcase-category">${x.category}</a>
-
-                        <div class="price-box">
-                            <p class="price">${x.discountPrice}</p>
-                            <del>${x.currentPrice}</del>
-                        </div>
+                      <button class="btn-action" onclick="addToBag(this)" data-itemobj='${JSON.stringify(
+                        x
+                      )}'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                      </button>
                     </div>
-                </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">${x.category}</a>
+
+                    <a href="/assets/pages/product.html">
+                      <h3 class="showcase-title">
+                        ${x.title}
+                      </h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">${x.discountPrice}</p>
+                      <del>${x.currentPrice}</del>
+                    </div>
+                  </div>
                 </div>
     `;
-    })
-    .join(" ");
+      })
+      .join(" ");
+
+    const newProduct = document.getElementById("newProduct");
+    if (!newProduct) return;
+    newProduct.innerHTML = dataItems;
+  };
+
+  // Pagination Function
+  datav();
+
+  //
+  // ================ NEW PRODUCTS ------------------------------------NEW PRODUCTS
+  // ================ NEW PRODUCTS ------------------------------------NEW PRODUCTS
+  // ================ NEW PRODUCTS ------------------------------------NEW PRODUCTS
+  //
+
+  const itemData = (data) => {
+    let length = data.length / 4;
+    if (length.toString().indexOf(".") != -1) {
+      length = length + 1;
+    }
+
+    let pageList = document.getElementById("page-list");
+
+    let skip = 0;
+    let load = 4;
+    for (let i = 1; i < length; i++) {
+      if (!pageList) return;
+      pageList.innerHTML += `<li class="" id="pageBtn" skipData="${skip}" loadData="${load}" >${i}</li>`;
+      skip = skip + 4;
+      load = load + 4;
+    }
+    const pageBtn = document.querySelectorAll("#pageBtn");
+    pageBtn[0].classList.add("active-page-btn");
+    pageBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        for (let b of pageBtn) {
+          b.classList.remove("active-page-btn");
+        }
+
+        btn.classList.add("active-page-btn");
+
+        let skipData = btn.getAttribute("skipData");
+        let loadData = btn.getAttribute("loadData");
+        datav(skipData, loadData);
+      });
+    });
+  };
+  itemData(data);
 };
 
-let singelProductBox;
-const singelProduct = (item) => {
-  const data = JSON.parse(item.dataset.singleobj);
-  singelProductBox.push(data);
-  localStorage.setItem("singelProductBox", JSON.stringify(singelProductBox));
-};
-
 //
-//
-// ===========SECOND DATA
-//
+// ====== DEAL OF THE DAY  ----------------------------------------------DEAL OF THE DAY
+// ====== DEAL OF THE DAY  ----------------------------------------------DEAL OF THE DAY
+// ====== DEAL OF THE DAY  ----------------------------------------------DEAL OF THE DAY
+// ====== DEAL OF THE DAY  ----------------------------------------------DEAL OF THE DAY
 //
 
-const dealOfTheDay = (item) => {
-  const dealOfTheDay = document.getElementById("dealOfTheDay");
-  if (!dealOfTheDay) return;
-  let data = item
+const dealOfTheDay = (data) => {
+  let dealData = data
     .map((x) => {
-      return dealOfTheDayHTML(x);
-    })
-    .join(" ");
-  dealOfTheDay.innerHTML = data;
-};
-const dealOfTheDayHTML = (x) => {
-  return `
+      if (x.collection == "deal of the day") {
+        return `
+
                 <div class="showcase-container">
                   <div class="showcase">
                     <div class="showcase-banner">
@@ -207,7 +181,7 @@ const dealOfTheDayHTML = (x) => {
                         <del>${x.currentPrice}</del>
                       </div>
 
-                      <button class="add-cart-btn" onclick="addToBag(this)" data-songobj='${JSON.stringify(
+                      <button class="add-cart-btn" onclick="addToBag(this)"  data-itemobj='${JSON.stringify(
                         x
                       )}'>add to cart</button>
 
@@ -249,224 +223,109 @@ const dealOfTheDayHTML = (x) => {
                     </div>
                   </div>
                 </div>
-    `;
-};
-
-//
-//
-// ===========THIRD DATA
-//
-//
-
-const newProducts = (item) => {
-  const newProduct = document.getElementById("newProduct");
-  if (!newProduct) return;
-  let data = item
-    .map((x) => {
-      return newProductHTML(x);
+      
+      `;
+      }
     })
     .join(" ");
-  newProduct.innerHTML = data;
+  const dealOfTheDay = document.getElementById("dealOfTheDay");
+  if (!dealOfTheDay) return;
+  dealOfTheDay.innerHTML = dealData;
 };
-const newProductHTML = (x) => {
-  return `
-                <div class="showcase">
-                  <div class="showcase-banner">
-                    <img
-                      src="${x.image1}"
-                      alt="${x.title}"
-                      width="300"
-                      class="product-img default"
-                    />
-                    <img
-                      src="${x.image}"
-                      alt="${x.title}"
-                      width="300"
-                      class="product-img hover"
-                    />
 
-                    <p class="showcase-badge">${x.off}%</p>
-                    <div class="showcase-actions">
-                      <button class="btn-action" onclick="addToLove(this)" data-heartdata='${JSON.stringify(
-                        x
-                      )}'>
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
+//
+// ====== NEW ARRIVAL TRANDING TOP RATED ----------------  NEW ARRIVAL TRANDING TOP RATED
+// ====== NEW ARRIVAL TRANDING TOP RATED ----------------  NEW ARRIVAL TRANDING TOP RATED
+// ====== NEW ARRIVAL TRANDING TOP RATED ----------------  NEW ARRIVAL TRANDING TOP RATED
+// ====== NEW ARRIVAL TRANDING TOP RATED ----------------  NEW ARRIVAL TRANDING TOP RATED
+//
 
-                      <button class="btn-action">
-                        <ion-icon name="eye-outline"></ion-icon>
-                      </button>
+const newArival = async () => {
+  const response = await fetch("http://localhost:3000/cetagiriesBox");
+  const data = await response.json();
 
-                      <button class="btn-action">
-                        <ion-icon name="repeat-outline"></ion-icon>
-                      </button>
+  let elem = data
+    .map((x) => {
+      return `
+              <div class="product-showcase">
+                <h2 id="heading-title" header="${x.heading}" class="title">${
+        x.heading
+      }</h2>
 
-                      <button class="btn-action" onclick="addToBag(this)" data-songobj='${JSON.stringify(
-                        x
-                      )}'>
-                        <ion-icon name="bag-add-outline"></ion-icon>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="showcase-content">
-                    <a href="#" class="showcase-category">${x.category}</a>
-
-                    <a href="/assets/pages/product.html">
-                      <h3 class="showcase-title">
-                        ${x.title}
-                      </h3>
-                    </a>
-
-                    <div class="showcase-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
-                    </div>
-
-                    <div class="price-box">
-                      <p class="price">${x.discountPrice}</p>
-                      <del>${x.currentPrice}</del>
-                    </div>
-                  </div>
+                <div class="showcase-wrapper has-scrollbar">
+                    ${categoriesProducts(x.products)}
                 </div>
-
-    `;
-};
-
-//
-//
-// ============= CATEGORY
-//
-//
-
-const cetagorieData = (items) => {
-  const { shoes, jackets, sports } = items;
-  shoeData(shoes);
-  jacketsData(jackets);
-  sportsData(sports);
-};
-
-const shoeData = (shoes) => {
-  let data = shoes
-    .map((x) => {
-      return `
-            <a href="#" class="sidebar-submenu-title">
-            <p class="product-name">${x.heading}</p>
-            <data value="${x.product.length}" class="stock" title="Available Stock"
-              >${x.product.length}</data
-            >
-          </a>
-        `;
-    })
-    .join(" ");
-  document.querySelector(".sidebar-submenu-category").innerHTML = data;
-};
-
-const jacketsData = (jackets) => {
-  let data = jackets
-    .map((x) => {
-      return `
-          <a href="#" class="sidebar-submenu-title">
-          <p class="product-name">${x.heading}</p>
-          <data value="${x.product.length}" class="stock" title="Available Stock"
-            >${x.product.length}</data
-          >
-        </a>
-      `;
-    })
-    .join(" ");
-  document.querySelector("#jackets-data").innerHTML = data;
-};
-
-const sportsData = (sports) => {
-  let data = sports
-    .map((x) => {
-      return `
-          <a href="#" class="sidebar-submenu-title">
-          <p class="product-name">${x.heading}</p>
-          <data value="${x.product.length}" class="stock" title="Available Stock"
-            >${x.product.length}</data
-          >
-        </a>
-      `;
-    })
-    .join(" ");
-  document.querySelector("#sports-data").innerHTML = data;
-};
-
-//
-//
-// ==================== COLABORATIONS
-//
-//
-
-const colaborationData = (items) => {
-  let data = items
-    .map((x) => {
-      return `
-                
-            <div class="category-item">
-            <div class="category-img-box">
-              <img
-                src="./assets/images/icons/dress.svg"
-                alt="dress & frock"
-                width="30"
-              />
-            </div>
-
-            <div class="category-content-box">
-              <div class="category-content-flex">
-                <h3 class="category-item-title">${x.heading}</h3>
-
-                <p class="category-item-amount">(${x.products.length})</p>
               </div>
-
-              <a href="#" class="category-btn">Show all</a>
-            </div>
-          </div>
     `;
     })
     .join(" ");
-  document.getElementById("colab-data").innerHTML = data;
+  const productMinimaContainer = document.querySelector(".product-minimal");
+  if (!productMinimaContainer) return;
+  productMinimaContainer.innerHTML = elem;
+};
+newArival();
+
+const categoriesProducts = (data) => {
+  return data
+    .map((x) => {
+      return category(x);
+    })
+    .join(" ");
+};
+
+const category = (x) => {
+  return `
+  <div class="showcase-container">
+                    <div class="showcase">
+                        <a href="/assets/pages/product.html" class="showcase-img-box" onclick="singelProduct(${x.id})>
+                        <img
+                            src=${x.image}
+                            alt="relaxed short full sleeve t-shirt"
+                            width="70"
+                            class="showcase-img"/>
+                        </a>
+                    <div class="showcase-content">
+                        <a href="#">
+                            <h4 class="showcase-title">
+                            ${x.title}
+                            </h4>
+                        </a>
+                        <a href="#" class="showcase-category">${x.category}</a>
+                        <div class="price-box">
+                            <p class="price">${x.discountPrice}</p>
+                            <del>${x.currentPrice}</del>
+                        </div>
+                    </div>
+                </div>
+                </div>
+  `;
 };
 
 //
-//
-// ==================== ADD TO BAG
-//
+// ====== ADD TO BUSKET ----------------  ADD TO BUSKET
+// ====== ADD TO BUSKET ----------------  ADD TO BUSKET
+// ====== ADD TO BUSKET ----------------  ADD TO BUSKET
+// ====== ADD TO BUSKET ----------------  ADD TO BUSKET
 //
 
-let bagItems;
-const addToBag = (itemId) => {
-  let addItem = JSON.parse(itemId.dataset.songobj);
-  bagItems.push(addItem);
-  localStorage.setItem("bagItems", JSON.stringify(bagItems));
-  bagCount();
+let busket;
+const addToBag = (x) => {
+  let items = JSON.parse(x.dataset.itemobj);
+  busket.push(items);
+  localStorage.setItem("busket", JSON.stringify(busket));
+  count();
+};
+let count = () => {
+  document.getElementById("cartItem").innerText = busket.length;
 };
 
-const bagCount = () => {
-  const cartItem = document.getElementById("cartItem");
-  if (!cartItem) return;
-  cartItem.innerHTML = bagItems.length;
-};
-
-//
-//
-// =========== ADD TO HEARTS
-//
-//
-
-let heartItem;
-const addToLove = (item) => {
-  let data = JSON.parse(item.dataset.heartdata);
-  heartItem.push(data);
-  localStorage.setItem("heartItem", JSON.stringify(heartItem));
+let favorite;
+const addToLove = (x) => {
+  let loveData = JSON.parse(x.dataset.heartdata);
+  favorite.push(loveData);
+  localStorage.setItem("favorite", JSON.stringify(favorite));
   heartCount();
 };
-
 const heartCount = () => {
-  document.getElementById("heartItem").innerHTML = heartItem.length;
+  document.getElementById("heartItem").innerText = favorite.length;
 };

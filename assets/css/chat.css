@@ -108,6 +108,7 @@
 }
 
 .small-chatitem {
+  display: none;
   cursor: pointer;
   position: fixed;
   right: 20px;

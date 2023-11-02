@@ -1,4 +1,3 @@
-
 // const hour = document.getElementById("hour");
 // const min = document.getElementById("min");
 // const sec = document.getElementById("sec");
@@ -15,8 +14,6 @@
 // };
 // countDown();
 // setInterval(countDown, 1000);
-
-
 
 {
   const header = document.getElementById("main-header");

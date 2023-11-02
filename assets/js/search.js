@@ -1,8 +1,7 @@
 const searchApi = async () => {
-  const response = await fetch("/assets/js/product.json");
+  const response = await fetch("http://localhost:3000/products");
   const data = await response.json();
-  const { newproducts } = data;
-  const lists = newproducts
+  const lists = data
     .map((x) => {
       return `
                 <li class="item-listss">
@@ -51,7 +50,6 @@ const search = () => {
     }
   }
 };
-
 
 const headerSearchContainer = document.querySelector(
   ".header-search-container"

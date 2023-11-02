@@ -1,0 +1,122 @@
+{
+  "products": [
+    {
+      "id": "10001",
+      "title": "Elevated Colorblock Mens Slim Fit Polo",
+      "category": "Shoes",
+      "image": "/assets/images/products/01.png",
+      "imageAlt": "/assets/images/products/001.png",
+      "off": "40",
+      "discountPrice": "₹320",
+      "currentPrice": "₹2,699,00",
+      "collection": "deal of the day",
+      "description": "Step up your game with the Elevated Colorblock Mens Slim Fit Polo. With a classic Cat logo and front"
+    },
+    {
+      "id": "10002",
+      "title": "Elevated Colorblock Mens Slim Fit Polo",
+      "category": "Shoes",
+      "off": "77",
+      "image": "/assets/images/products/0002.png",
+      "imageAlt": "/assets/images/products/002.png",
+      "discountPrice": "₹320",
+      "currentPrice": "₹2,699,00",
+      "description": "Step up your game with the Elevated Colorblock Mens Slim Fit Polo. With a classic Cat logo and front"
+    },
+    {
+      "id": "10003",
+      "title": "Elevated Colorblock Mens Slim Fit Polo",
+      "category": "Shoes",
+      "image": "/assets/images/products/02.png",
+      "imageAlt": "/assets/images/products/02.png",
+      "discountPrice": "₹320",
+      "off": "54",
+      "currentPrice": "₹2,699,00",
+      "description": "Step up your game with the Elevated Colorblock Mens Slim Fit Polo. With a classic Cat logo and front"
+    }
+  ],
+
+  "cetagiriesBox": [
+    {
+      "heading": "New Arival",
+
+      "products": [
+        {
+          "id": "10002",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "/assets/images/products/EVOSTRIPE1.png",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
+        },
+        {
+          "id": "10002",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621154/03/mod01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Polo",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
+        }
+      ]
+    },
+    {
+      "heading": "Tranding",
+
+      "products": [
+        {
+          "id": "10002",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621154/03/mod01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Polo",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
+        },
+        {
+          "id": "10002",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621154/03/mod01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Polo",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
+        }
+      ]
+    },
+    {
+      "heading": "Top Rated",
+
+      "products": [
+        {
+          "id": "10002",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621154/03/mod01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Polo",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
+        },
+        {
+          "id": "10002",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621154/03/mod01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Polo",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
+        },
+        {
+          "id": "10002",
+          "title": "Mercedes-AMG PETRONAS Men's Motorsport Polo",
+          "category": "Clothes",
+          "description": "PUMA Motorsport and Mercedes-AMG Petronas have been driving for success since 2012, creating exciting",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/621154/03/mod01/fnd/IND/fmt/png/Mercedes-AMG-PETRONAS-Men's-Motorsport-Polo",
+          "discountPrice": "₹109",
+          "currentPrice": "₹2,399,00"
+        }
+      ]
+    }
+  ]
+}
