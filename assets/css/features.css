@@ -12,15 +12,14 @@ body {
   transition: 0.5s top ease;
   border-radius: 10px;
   display: flex;
-  
 }
 
 #popup .hydrated {
-    font-size: 2rem;
-    color: #000;
+  font-size: 2rem;
+  color: #000;
 }
 #popup a {
-    position: relative;
+  position: relative;
 }
 
 #pagination {
@@ -34,23 +33,32 @@ body {
   display: flex;
   gap: 10px;
 }
-#prev, #next {
+#prev,
+#next {
   display: flex;
   align-items: center;
 }
 #prev i {
   margin-top: 3.5px;
 }
-#next i{
+#next i {
   rotate: 180deg;
 }
 
-#page-group ul, #page-group{
+#page-group ul,
+#page-group,
+#pageBTN,
+#Nxt {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-#page-group ul li {
+#pageBTN {
+  justify-content: end;
+  padding: 2vw 0;
+}
+#page-group ul li,
+#Nxt li {
   height: 30px;
   width: 30px;
   background-color: #ccc;
@@ -62,9 +70,9 @@ body {
   font-weight: 600;
 }
 
-.active-page-btn{
+.active-page-btn {
   background-image: linear-gradient(#ff4568, #ff4568) !important;
   color: #fff;
   background-repeat: no-repeat;
-  transition: .3s;
+  transition: 0.3s;
 }

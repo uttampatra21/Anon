@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   count();
   heartCount();
 });
+
 const fetchApi = async () => {
   const api = `http://localhost:3000/products`;
   const response = await fetch(api);
@@ -108,6 +109,7 @@ const fetchApi = async () => {
 
     let skip = 0;
     let load = 4;
+
     for (let i = 1; i < length; i++) {
       if (!pageList) return;
       pageList.innerHTML += `<li class="" id="pageBtn" skipData="${skip}" loadData="${load}" >${i}</li>`;
@@ -115,7 +117,9 @@ const fetchApi = async () => {
       load = load + 4;
     }
     const pageBtn = document.querySelectorAll("#pageBtn");
+
     pageBtn[0].classList.add("active-page-btn");
+
     pageBtn.forEach((btn) => {
       btn.addEventListener("click", () => {
         for (let b of pageBtn) {
@@ -279,10 +283,11 @@ const category = (x) => {
                     <div class="showcase">
                         <a href="/assets/pages/product.html" class="showcase-img-box" onclick="singelProduct(${x.id})>
                         <img
-                            src=${x.image}
-                            alt="relaxed short full sleeve t-shirt"
+                            src="${x.image}"
+                            alt=""
                             width="70"
-                            class="showcase-img"/>
+                            class="showcase-img"
+                            />
                         </a>
                     <div class="showcase-content">
                         <a href="#">
