@@ -2,26 +2,182 @@ html,
 body {
   transition: 0.5s;
 }
-#popup {
-  position: fixed;
-  top: 5%;
-  right: 5%;
-  z-index: 999;
-  background-color: #ccc;
-  padding: 12px;
-  transition: 0.5s top ease;
-  border-radius: 10px;
-  display: flex;
-}
-
-#popup .hydrated {
-  font-size: 2rem;
-  color: #000;
-}
-#popup a {
+body {
   position: relative;
 }
 
+#sign-in {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 120px;
+  right: 180px;
+  z-index: 999;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#sign-cont {
+  position: relative;
+  height: 100%;
+}
+#sign-in .log-main {
+  position: relative;
+  left: 0px;
+  transition: 0.5s left ease-in-out;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#sign-in .log-main h5 {
+  letter-spacing: 0.5px;
+  line-height: 3;
+}
+
+#sign-in img {
+  display: flex;
+  justify-content: center;
+}
+
+.account-pvc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.loginn-logo {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  background-color: #ccc;
+  border-radius: 50px;
+}
+.logo-icon i {
+  color: #595858;
+}
+
+.shn-detls span {
+  color: #000;
+}
+.l-icon {
+  margin-top: 2rem;
+  padding: 10px;
+}
+
+.shn-detls {
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.shn-detls span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#sign-in hr {
+  border: 1.2px solid #ccc;
+}
+
+.sign-in--button {
+  margin-top: 3rem;
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#usersignin {
+  padding: 8px 20px;
+  border: 1px solid #ff4568;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+#usersignin:hover , #usersign-up:hover{
+  background-color: #ff4568;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#sign-in--popup {
+  padding: 50px;
+  position: absolute;
+  top: 0;
+  right: 250px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.9s right ease-in-out;
+}
+#sign-in--popup input,
+#sign-up--popup input {
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+#sign-in--popup button,
+#sign-up--popup button {
+  margin-top: 1rem;
+}
+
+.didnt-have-account p {
+  line-height: 1;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 4rem;
+}
+.didnt-have-account p span {
+  padding: 5px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#sign-up--popup {
+  padding: 50px;
+  position: absolute;
+  top: 0;
+  left: 300px;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+
+============ PAGINATION
+*/
 #pagination {
   width: 100%;
   height: 100px;

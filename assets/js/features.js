@@ -94,7 +94,7 @@
           </div>
 
           <div class="header-user-actions">
-            <button class="action-btn">
+            <button class="action-btn" id="userId">
               <ion-icon name="person-outline"></ion-icon>
             </button>
 
