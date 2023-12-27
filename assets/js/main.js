@@ -11,9 +11,12 @@ window.addEventListener("load", () => {
 
 const fetchApi = async () => {
   const api = `http://localhost:3000/products`;
-  const response = await fetch(api);
-  const data = await response.json();
+  const response = await fetch("/db/data.js");
+
+  let getData = await response.json();
+  const data = getData.products;
   dealOfTheDay(data);
+
   const datav = (from = 0, to = 4) => {
     let filter = data.slice(from, to);
     let dataItems = filter
@@ -61,7 +64,9 @@ const fetchApi = async () => {
                   <div class="showcase-content">
                     <a href="#" class="showcase-category">${x.category}</a>
 
-                    <a href="/assets/pages/product.html">
+                    <a href="/assets/pages/product.html" onclick="singleProduct(${
+                      x.id
+                    })">
                       <h3 class="showcase-title">
                         ${x.title}
                       </h3>
@@ -333,4 +338,9 @@ const addToLove = (x) => {
 };
 const heartCount = () => {
   document.getElementById("heartItem").innerText = favorite.length;
+};
+
+const singleProduct = (x) => {
+  alert(x);
+  localStorage.setItem("singleProduct", JSON.stringify(x));
 };
