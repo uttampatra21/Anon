@@ -33,6 +33,8 @@ const dataItems = () => {
 };
 dataItems();
 
+
+
 // --------------------- REMOVE FROM BAG
 
 const removeFromBag = (id) => {

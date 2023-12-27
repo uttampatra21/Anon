@@ -1,6 +1,7 @@
 const searchApi = async () => {
-  const response = await fetch("http://localhost:3000/products");
-  const data = await response.json();
+  const response = await fetch("/db/data.js");
+  const itemData = await response.json();
+  const data = itemData.products;
   const lists = data
     .map((x) => {
       return `

@@ -1,3 +1,13 @@
+window.addEventListener("load", () => {
+  let bagItemsstr = localStorage.getItem("busket");
+  busket = bagItemsstr ? JSON.parse(bagItemsstr) : [];
+
+  let loveItemstr = localStorage.getItem("favorite");
+  favorite = loveItemstr ? JSON.parse(loveItemstr) : [];
+  count();
+  heartCount();
+});
+
 const id = localStorage.getItem("singleProduct");
 
 const fetchData = async () => {
@@ -17,7 +27,6 @@ const singleData = (data) => {
 
 const getSingleData = (data) => {
   const singleproduct = document.getElementById("singleproduct");
-  console.log(data);
   singleproduct.innerHTML = interface(data);
 };
 
@@ -35,15 +44,24 @@ const interface = (x) => {
   <div id="grid2-item">
     <a href="/">Home /</a>
     <h1>${x.title}</h1>
-    <h4>₹ ${x.discountPrice},00</h4>
+    <h4>${x.discountPrice},00</h4>
     <div class="size">
       <span class="size-btn">S</span>
       <span class="size-btn">M</span>
     </div>
     <div id="buttons">
-      <button class="bag add-cart-btn">ADD TO BAG</button>
+      <button class="bag add-cart-btn" onclick='addBag(this)' data-itemobj='${JSON.stringify(
+        x
+      )}'>ADD TO BAG</button>
       <button class="bag add-cart-wishlist">ADD TO WISHLIST</button>
     </div>
   </div>
     `;
+};
+
+const addBag = (x) => {
+  let items = JSON.parse(x.dataset.itemobj);
+  busket.push(items);
+  localStorage.setItem("busket", JSON.stringify(busket));
+  count();
 };

@@ -158,11 +158,15 @@ const dealOfTheDay = (data) => {
                 <div class="showcase-container">
                   <div class="showcase">
                     <div class="showcase-banner">
+                    <a href="/assets/pages/product.html" onclick="singleProduct(${
+                      x.id
+                    })">
                       <img
                         src="${x.image}"
                         alt="${x.title}"
                         class="showcase-img"
                       />
+                      </a>
                     </div>
 
                     <div class="showcase-content">
@@ -174,7 +178,7 @@ const dealOfTheDay = (data) => {
                         <ion-icon name="star-outline"></ion-icon>
                       </div>
 
-                      <a href="#">
+                      <a>
                         <h3 class="showcase-title">
                           ${x.title}
                         </h3>
@@ -325,6 +329,7 @@ const addToBag = (x) => {
   localStorage.setItem("busket", JSON.stringify(busket));
   count();
 };
+
 let count = () => {
   document.getElementById("cartItem").innerText = busket.length;
 };
